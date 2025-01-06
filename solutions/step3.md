@@ -1,7 +1,7 @@
 Our `ListItem` is pretty set from step 2.5, so we focus on `TodoList`.
 ```html
 import React, {useState} from "react";
-import ListItem from "./ListItem.js";
+import ListItem from "./ListItem";
 
 const TodoList = (props) => {
   const [todos, setTodos] = useState([]);
