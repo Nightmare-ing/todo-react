@@ -1,7 +1,7 @@
 In a parent component, such as `TodoList`, we have the following
 ```html
 import React from "react";
-import ListItem from "./ListItem.js";
+import ListItem from "./ListItem";
 
 const TodoList = (props) => {
   return (

@@ -1,7 +1,7 @@
-`TodoList.js`:
+`TodoList.jsx`:
 ```html
 import React, { useState } from "react";
-import ListItem from "./ListItem.js";
+import ListItem from "./ListItem";
 
 const TodoList = (props) => {
   const [todos, setTodos] = useState([]);
@@ -49,7 +49,7 @@ const TodoList = (props) => {
 export default TodoList;
 ```
 
-`ListItem.js`:
+`ListItem.jsx`:
 ```html
 import React, { useState } from "react";
 

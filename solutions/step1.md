@@ -1,4 +1,4 @@
-Before we can run the hotloader, we need to make sure that we actually navigate inside the folder first! To do so, we run
+Before we can run the client, we need to make sure that we actually navigate inside the folder first! To do so, we run
 ```
 cd todo-react/
 ```
@@ -6,7 +6,7 @@ After that, we actually need to install some packages (like React!), to make thi
 ```
 npm install
 ```
-Finally, we can then run the hotloader, which if you recall from past workshops, we do with the following
+Finally, we can then run the client, which if you recall from past workshops, we do with the following
 ```
-npm run hotloader
+npm run dev
 ```
