@@ -3,20 +3,7 @@ import ListItem from "./ListItem";
 import NewInput from "./NewInput";
 
 const App = (props) => {
-  const LISTS = [
-    {
-      id: "random id 0",
-      content: "DONT",
-      checked: true,
-    },
-    {
-      id: "random id 1",
-      content: "USE",
-      checked: false,
-    },
-  ];
-
-  const [lists, setLists] = useState(LISTS);
+  const [lists, setLists] = useState([]);
 
   const addItem = (newContent) => {
     setLists(
