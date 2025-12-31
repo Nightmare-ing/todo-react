@@ -1,19 +1,31 @@
-import React, { useState } from "react";
+import React, { useId, useState } from "react";
 import ListItem from "./ListItem";
+import NewInput from "./NewInput";
 
 const App = (props) => {
   const LISTS = [
     {
-      id: "0",
+      id: "random id 0",
       content: "DONT",
     },
     {
-      id: "1",
+      id: "random id 1",
       content: "USE",
     },
   ];
 
   const [lists, setLists] = useState(LISTS);
+
+  const addItem = (newContent) => {
+    setLists(
+      lists.concat([
+        {
+          id: "random id " + lists.length,
+          content: newContent,
+        },
+      ])
+    );
+  };
 
   return (
     <div>
@@ -25,8 +37,7 @@ const App = (props) => {
           </li>
         ))}
       </ul>
-      <input type="text" />
-      <button>Add to-do!</button>
+      <NewInput onSubmit={addItem} />
     </div>
   );
 };
