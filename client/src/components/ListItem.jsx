@@ -1,8 +1,21 @@
+import { useState } from "react";
+
+import "./ListItem.css";
+
 const ListItem = (props) => {
+  const [state, setState] = useState(false);
+
   return (
     <div>
-      <input type="checkbox" id={props.id} />
-      <label htmlFor={props.id}>{props.content}</label>
+      <label>
+        <input
+          type="checkbox"
+          id={props.id}
+          checked={state}
+          onChange={(e) => setState(e.target.checked)}
+        />
+        <span className={state ? "done" : ""}>{props.content}</span>
+      </label>
     </div>
   );
 };

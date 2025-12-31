@@ -7,10 +7,12 @@ const App = (props) => {
     {
       id: "random id 0",
       content: "DONT",
+      checked: true,
     },
     {
       id: "random id 1",
       content: "USE",
+      checked: false,
     },
   ];
 
@@ -22,6 +24,7 @@ const App = (props) => {
         {
           id: "random id " + lists.length,
           content: newContent,
+          checked: false,
         },
       ])
     );
