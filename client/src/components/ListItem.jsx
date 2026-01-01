@@ -5,6 +5,11 @@ import "./ListItem.css";
 const ListItem = (props) => {
   const [state, setState] = useState(false);
 
+  const deleteItem = (event) => {
+    event.preventDefault();
+    props.removeItem && props.removeItem(props.id);
+  };
+
   return (
     <div>
       <label>
@@ -14,8 +19,11 @@ const ListItem = (props) => {
           checked={state}
           onChange={(e) => setState(e.target.checked)}
         />
-        <span className={state ? "done" : ""}>{props.content}</span>
+        <span className={"listItem " + (state ? "done" : "")}>
+          {props.content}
+        </span>
       </label>
+      <button onClick={deleteItem}>X</button>
     </div>
   );
 };

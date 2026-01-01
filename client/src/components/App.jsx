@@ -3,13 +3,13 @@ import ListItem from "./ListItem";
 import NewInput from "./NewInput";
 
 const App = (props) => {
-  const [lists, setLists] = useState([]);
+  const [list, setList] = useState([]);
 
   const addItem = (newContent) => {
-    setLists(
-      lists.concat([
+    setList(
+      list.concat([
         {
-          id: "random id " + lists.length,
+          id: "random id " + list.length,
           content: newContent,
           checked: false,
         },
@@ -17,13 +17,21 @@ const App = (props) => {
     );
   };
 
+  const removeItem = (itemId) => {
+    setList(list.filter((item) => item.id !== itemId));
+  };
+
   return (
     <div>
       <h1>MATT's TO-DOS</h1>
       <ul>
-        {lists.map((item) => (
+        {list.map((item) => (
           <li key={item.id}>
-            <ListItem id={item.id} content={item.content} />
+            <ListItem
+              id={item.id}
+              content={item.content}
+              removeItem={removeItem}
+            />
           </li>
         ))}
       </ul>
