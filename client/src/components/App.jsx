@@ -26,13 +26,11 @@ const App = (props) => {
       <h1>MATT's TO-DOS</h1>
       <ul>
         {list.map((item) => (
-          <li key={item.id}>
-            <ListItem
-              id={item.id}
-              content={item.content}
-              removeItem={removeItem}
-            />
-          </li>
+          <ListItem
+            id={item.id}
+            content={item.content}
+            removeItem={removeItem}
+          />
         ))}
       </ul>
       <NewInput onSubmit={addItem} />

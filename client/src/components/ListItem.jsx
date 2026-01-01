@@ -11,7 +11,7 @@ const ListItem = (props) => {
   };
 
   return (
-    <div>
+    <li className={state ? "Done" : ""} key={props.id}>
       <label>
         <input
           type="checkbox"
@@ -19,12 +19,10 @@ const ListItem = (props) => {
           checked={state}
           onChange={(e) => setState(e.target.checked)}
         />
-        <span className={"listItem " + (state ? "done" : "")}>
-          {props.content}
-        </span>
+        <span className="ListItem-content">{props.content}</span>
       </label>
       <button onClick={deleteItem}>X</button>
-    </div>
+    </li>
   );
 };
 
